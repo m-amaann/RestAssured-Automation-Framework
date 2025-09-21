@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All API Test Suite" parallel="tests" thread-count="4">
+
+    <!-- Smoke Tests -->
+    <test name="Smoke" verbose="2" preserve-order="true">
+        <classes>
+            <class name="api.UserTests"/>
+        </classes>
+    </test>
+
+    <!-- Regression / End-to-End Tests -->
+    <test name="Regression" verbose="2" preserve-order="true">
+        <classes>
+            <class name="e2e.CompleteFlowTest"/>
+        </classes>
+    </test>
+
+</suite>
